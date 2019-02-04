@@ -2,6 +2,7 @@
 This is a model of a geoscience *borehole*.
 
 <img src="model/sosa.svg" style="width:800px;" alt="Borehole model profiling SOSA" />  
+
 **Fig. 1**: This model profiling the SOSA ontology.  
 
 It is a profile of multiple specifications for biophysical monitoring sites, observations & measurements, sampling and geospatial features. This means data recorded using it can be exported in accordance with a number of well-known international and national standards thus it should be maximally interoperable.
