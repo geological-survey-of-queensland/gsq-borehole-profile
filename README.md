@@ -21,7 +21,7 @@ This profile is designed to meet the needs of the [Geological Survey of Queensla
 This profile is presented as a series of files that perform different roles:
 
 * [model](model/) - the *model* folder contains the model specification itself. This is given as both images and also as a formal [RDF]() model file (ontology).
-* [profile.ttl]() - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's [Profiles Ontology](https://www.w3.org/TR/dx-prof/) which describes how all the parts related to one another, the roles they play (to give *guidance* for use, to *validate* data etc.) and how this profile *profiles* the various standards listed above.
+* [profile.ttl](profile.ttl) - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's [Profiles Ontology](https://www.w3.org/TR/dx-prof/) which describes how all the parts related to one another, the roles they play (to give *guidance* for use, to *validate* data etc.) and how this profile *profiles* the various standards listed above.
 
 
 ## License
