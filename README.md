@@ -5,7 +5,7 @@ This is a model of a geoscience *borehole*.
 
 **Fig. 1**: This model profiling the SOSA ontology.  
 
-It is a profile of multiple specifications for biophysical monitoring sites, observations & measurements, sampling and geospatial features. This means data recorded using it can be exported in accordance with a number of well-known international and national standards thus it should be maximally interoperable.
+It is the [Geological Survey of Queensland (GSQ)](https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq)'s' profile of multiple specifications for biophysical monitoring sites, observations & measurements, sampling and geospatial features. This means data recorded using it can be exported in accordance with a number of well-known international and national standards thus it should be maximally interoperable.
 
 The specific specifications that this model profiles are:
 
@@ -21,7 +21,7 @@ This profile is designed to meet the needs of the [Geological Survey of Queensla
 This profile is presented as a series of files that perform different roles:
 
 * [Guidance document](Guidance.pdf) - a written document explaining how to use this profile
-* [model](model/) - the *model* folder contains the model specification itself. This is given as both images and also as a formal [RDF]() model file (ontology).
+* [model](model/) - the *model* folder contains the model specification itself. This is given as both images and also as a formal [RDF](https://www.w3.org/RDF/) model file (ontology).
 * [profile.ttl](profile.ttl) - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's [Profiles Ontology](https://www.w3.org/TR/dx-prof/) which describes how all the parts related to one another, the roles they play (to give *guidance* for use, to *validate* data etc.) and how this profile *profiles* the various standards listed above.
 
 
@@ -30,6 +30,10 @@ The content of this repository is licensed for use with the [Creative Commons 4.
 
 
 ## Contacts
+*owner*:  
+**Geological Survey of Queensland**  
+1 William St, Brisbane, Queensland, Australia  
+
 *author*:  
 **Nicholas Car**  
 *Senior Experimental Scientist*  
