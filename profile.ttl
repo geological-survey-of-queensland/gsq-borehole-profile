@@ -1,1 +1,32 @@
-# GSQ Borehole Profile's profile declaration according to the Profiles Ontology
+# GSQ Dataset Profile's profile declaration according to the Profiles Ontology
+@prefix gsq: <http://linked.data.gov.au/def/borehole/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+
+
+<http://linked.data.gov.au/def/borehole>
+  a prof:Profile ;
+  rdfs:label "GSQ's Borehole Profile" ;
+  rdfs:comment """The Geological Survey of Queensland's profile of several specifications to characterise a borehole""" ;
+  prof:isProfileOf
+    <https://www.w3.org/TR/vocab-ssn/> ,  # SSN Ontology (SOSA)
+    <https://www.w3.org/TR/owl-time/> ,   # OWL Time
+    <https://www.w3.org/TR/prov-o/> ;     # Provenance Ontology
+  prof:hasResource [
+    a prof:ResourceDescriptor;
+  	rdfs:label "Ontology document" ;
+    prof:hasRole role:Specification ;
+    dct:conformsTo <https://www.w3.org/TR/owl2-syntax/> ;  # TODO: find the best reference for OWL2
+    dct:format <https://w3id.org/mediatype/text/turtle> ;
+    prof:hasArtifact <http://linked.data.gov.au/def/borehole/model/borehole.ttl> ;
+  ] ,
+  [
+    a prof:ResourceDescriptor ;
+    rdfs:label "Constraints in SHACL" ;
+    dct:conformsTo <http://www.w3.org/ns/shacl#> ;
+    dct:format <https://w3id.org/mediatype/text/turtle> ;
+    prof:hasRole role:fullConstraints ;
+    prof:hasArtifact gsq:constraints.ttl
+  ] ;
+.
