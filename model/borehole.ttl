@@ -1,6 +1,8 @@
 @prefix : <http://linked.data.gov.au/def/borehole/> .
+@prefix asgs: <http://linked.data.gov.au/def/asgs#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix gsq: <http://linked.data.gov.au/def/gsq> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sdo: <https://schema.org/> .
@@ -9,15 +11,16 @@
 @prefix geox: <http://linked.data.gov.au/def/geox/> .
 @prefix loci: <http://linked.data.gov.au/def/loci/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @base <http://linked.data.gov.au/def/borehole> .
 
 <http://linked.data.gov.au/def/borehole> rdf:type owl:Ontology ;
-                                          owl:imports <http://www.w3.org/2006/time#2016> ,
-                                                      <http://www.w3.org/ns/sosa/> ,
-                                                      <http://www.w3.org/ns/ssn/ext> ;
+                                          # owl:imports <http://www.w3.org/2006/time#2016> ,
+                                          #            <http://www.w3.org/ns/sosa/> ,
+                                          #            <http://www.w3.org/ns/ssn/ext> ;
                                           dc:creator "Nicholas J. Car" ;
                                           dc:publisher "Geological Survey of Queensland" ;
                                           dct:created "2019-04-30"^^xsd:date ;
@@ -48,27 +51,36 @@ sdo:domainIncludes rdf:type owl:AnnotationProperty .
 
 ###  http://linked.data.gov.au/def/borehole/driller
 :driller rdf:type owl:ObjectProperty ;
+         rdfs:range prov:Agent ;
          rdfs:subPropertyOf prov:wasAttributedTo ;
          rdfs:comment "An organisation that drilled the borehole."@en ;
          rdfs:label "driller"@en ;
          skos:usageNote "If the borehole was drilled by multiple organisations, add multiple :driller properties. Different periods of drilling, as indicated by :hadDrillingTime may have the specific driller indicated by qualifying the Agent (driller) / Activity (drilling episode), as per PROV-O's qualifiedAssociation pattern."@en ;
          sdo:domainIncludes :Borehole .
 
+###  http://linked.data.gov.au/def/borehole/hasDiameter
+:hasDiameter rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf qudt:hasQuantity ;
+                 rdfs:range qudt:Quantity ;
+                 rdfs:comment "The average width of the borehole shaft."@en ;
+                 rdfs:label "has diameter"@en ;
+                 sdo:domainIncludes :Borehole .
 
 ###  http://linked.data.gov.au/def/borehole/hadDrillingMethod
 :hadDrillingMethod rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf loci:hadGenerationMethod ;
                    rdfs:domain :Borehole ;
                    rdfs:range skos:Concept ;
-                   rdfs:comment "The method of drilling used to create this borehole." ;
+                   rdfs:comment "The method of drilling used to create this borehole."@en ;
                    rdfs:label "had drilling method" ;
                    skos:usageNote """Drilling Methods must be selected from the Borehole Drilling Methods vocabulary. If multiple methods were used, multiple :hadDrillingMethod properties should be used.
 
-This method is a sub property of the Loc-I Ontology's had:GenerationMethod which is a property chain axiom for PROV's  prov:wasGeneratedBy / prov:qualifiedAssociation / prov:hadPlan which allows an Entity (the borehole) to indicate the method (a PROV Plan) that was used to instruct the Activity that generated it (here the event of drilling).""" .
+This method is a sub property of the Loc-I Ontology's had:GenerationMethod which is a property chain axiom for PROV's  prov:wasGeneratedBy / prov:qualifiedAssociation / prov:hadPlan which allows an Entity (the borehole) to indicate the method (a PROV Plan) that was used to instruct the Activity that generated it (here the event of drilling)."""@en .
 
 
 ###  http://linked.data.gov.au/def/borehole/hadDrillingTime
 :hadDrillingTime rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf time:hasTime ;
                  rdfs:range time:ProperInterval ;
                  rdfs:comment "The time period during which the borehole was drilled."@en ;
                  rdfs:label "had drilling time"@en ;
@@ -102,10 +114,10 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
             skos:usageNote "Purposes must be selected from the Borehole Purpose vocabulary. Multiple purposes may be selected. If purposes are time-bound, this should be indicated by assigning the purpose a time:hasTime property."@en .
 
 
-###  http://linked.data.gov.au/def/borehole/hasStateorTerritory
-:hasStateorTerritory rdf:type owl:ObjectProperty ;
-                     rdfs:range skos:Concept ;
-                     rdfs:comment "The Borehole is juristictionally within an Australian State or Territory."@en ;
+###  http://linked.data.gov.au/def/borehole/hasStateOrTerritory
+:hasStateOrTerritory rdf:type owl:ObjectProperty ;
+                     rdfs:range asgs:StateOrTerritory ;
+                     rdfs:comment "The Australian State or Territory that this borehole is juristictionally within."@en ;
                      rdfs:label "has state" ;
                      skos:usageNote "The borehole need bot be spatially within the Australian State or Territory."@en ;
                      sdo:domainIncludes :Borehole .
@@ -126,8 +138,9 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
                         rdfs:range skos:Concept ;
                         rdfs:comment "The circumstances of a borehole's entrance." ;
                         rdfs:label "has surface circumstance" ;
-                        skos:historyNote "This property maps to GeoSciML's Borehole Start property." ;
-                        skos:usageNote "Surface Circumstances must be selected from the Borehole Surface Circumstance vocabulary." .
+                        skos:usageNote """Surface Circumstances must be selected from the Borehole Surface Circumstance vocabulary.
+
+This property maps to GeoSciML's Borehole Start property.""" .
 
 
 ###  http://linked.data.gov.au/def/borehole/operator
