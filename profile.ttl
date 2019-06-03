@@ -10,6 +10,7 @@
   rdfs:label "GSQ's Borehole Profile" ;
   rdfs:comment """The Geological Survey of Queensland's profile of several specifications to characterise a borehole""" ;
   prof:isProfileOf
+    <https://www.opengeospatial.org/standards/geosciml> ,  # GeoSciML
     <https://www.w3.org/TR/vocab-ssn/> ,  # SSN Ontology (SOSA)
     <https://www.w3.org/TR/owl-time/> ,   # OWL Time
     <https://www.w3.org/TR/prov-o/> ;     # Provenance Ontology
