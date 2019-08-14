@@ -1,7 +1,7 @@
 # Reference models & websites for borehole
 
 The GeoSciML Borehole package contains model elements for representing Boreholes:  
-http://geosciml.org/doc/borehole/3.0/documentation/html/Borehole/package-summary.html
+https://docs.opengeospatial.org/is/16-008/16-008.html#285
 
 Boreholes, Sampling & Observations CGI Data Model Collaboration  
 https://confluence.csiro.au/pages/viewpage.action?pageId=432771103
