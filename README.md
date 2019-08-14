@@ -19,17 +19,21 @@ This profile is designed to meet the needs of the [Geological Survey of Queensla
 
 ### Other views of a `Borehole`
 
+<img src="model/borehole-hierarchy.svg" style="width:300px;" alt="Borehole hierarchy`" />  
+
+**Fig. 2**: Borehole hierarchy  
+
 <img src="model/geosparql.svg" style="width:300px;" alt="Borehole as a GeoSPARQL `Feature`" />  
 
-**Fig. 2**: Borehole as a GeoSPARQL `Feature`  
+**Fig. 3**: Borehole as a GeoSPARQL `Feature`  
 
 <img src="model/sweet.svg" style="width:300px;" alt="Borehole in relation to SWEET ontology objects" />  
 
-**Fig. 3**: Borehole in relation to SWEET ontology objects  
+**Fig. 4**: Borehole in relation to SWEET ontology objects  
 
 <img src="model/sosa.svg" style="width:300px;" alt="Borehole in relation SOSA objects (for sample relations)  " />  
 
-**Fig. 4**: Borehole in relation SOSA objects (for sample relations)  
+**Fig. 5**: Borehole in relation SOSA objects (for sample relations)  
 
 
 ## Profile Resources
