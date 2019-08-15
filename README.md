@@ -19,16 +19,16 @@ This profile is designed to meet the needs of the [Geological Survey of Queensla
 
 Here are a serices of perspectives (views) of this profile.
 
-<img src="model/Classes.svg" style="width:50%;" alt="Borehole Classes" />  
+<img src="model/Classes.svg" style="width:30%;" alt="Borehole Classes" /><br />
 **Fig. 2**: This profile's Borehole Classes. *Well* & *Wellore* are specialised types of *Borehole* with a *Well* containing multiple *Wellbores*. A *Borehole* is composed of one or more *BoreholeIntervals*. *BoreholeIntervals* may be in sequence with other *BoreholeIntervals* (Interval X, next, Intervay Y).
 
-<img src="model/align-GeoSPARQL.svg" style="width:55%;" alt="Borehole as a GeoSPARQL `Feature`" /><br />  
+<img src="model/align-GeoSPARQL.svg" style="width:35%;" alt="Borehole as a GeoSPARQL `Feature`" /><br />  
 **Fig. 3**: Alignment with GeoSPARQL: `Borehole` as a GeoSPARQL `Feature`  
 
-<img src="model/align-SWEET.svg" style="width:65%;;" alt="Borehole in relation to SWEET ontology objects" /><br />
+<img src="model/align-SWEET.svg" style="width:40%;" alt="Borehole in relation to SWEET ontology objects" /><br />
 **Fig. 4**: Alignment with [SWEET](http://www.sweetontology.org/): `Borehole` in relation to SWEET ontology individuals  
 
-<img src="model/align-SOSA.svg" style="width75%;" alt="Borehole in relation SOSA objects (for sample relations)  " /><br />
+<img src="model/align-SOSA.svg" style="width:75%;" alt="Borehole in relation SOSA objects (for sample relations)  " /><br />
 **Fig. 5**: Alignment with SOSA: `Borehole` in relation SOSA objects (for sample relations). Also included is GSQ's eneral `Site` class  
 
 
