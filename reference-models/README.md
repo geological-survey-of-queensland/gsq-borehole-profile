@@ -3,6 +3,9 @@
 The GeoSciML Borehole package contains model elements for representing Boreholes:  
 https://docs.opengeospatial.org/is/16-008/16-008.html#285
 
+GeoSCIML Lite:  
+https://docs.opengeospatial.org/is/16-008/16-008.html#403
+
 Boreholes, Sampling & Observations CGI Data Model Collaboration  
 https://confluence.csiro.au/pages/viewpage.action?pageId=432771103
 
