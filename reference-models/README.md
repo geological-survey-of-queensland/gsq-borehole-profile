@@ -12,6 +12,9 @@ https://confluence.csiro.au/pages/viewpage.action?pageId=432771103
 OGC Geoscience Markup Language 4.1 (GeoSciML)  
 https://docs.opengeospatial.org/is/16-008/16-008.html
 
+INSPIRE Data Models:  
+https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm
+
 Borehole Interoperability Experiment  
 http://www.opengeospatial.org/projects/initiatives/boreholeie  
 https://www.opengeospatial.org/pressroom/pressreleases/2823  
