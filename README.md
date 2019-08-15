@@ -1,13 +1,11 @@
 # GSQ Borehole Profile
-This is a model of a geoscience *borehole*.
+A model of a geoscience *borehole* which may also be known as a *drillbore*, *well*, *wellbore*. This model includes specialised variants for all sorts.
 
-<img src="model/properties.svg" style="width:800px;" alt="Borehole properties model" />  
+<img src="model/Borehole.svg" style="width:80%;" alt="Borehole Classes" />  
 
-**Fig. 1**: Basic properties of the `Borehole` class object  
+**Fig. 1**: Main properties of the *Borehole* class.
 
-It is the [Geological Survey of Queensland (GSQ)](https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq)'s' profile of multiple specifications for biophysical monitoring sites, observations & measurements, sampling and geospatial features. This means data recorded using it can be exported in accordance with a number of well-known international and national standards, thus it should be maximally interoperable.
-
-The specific specifications that this model profiles are:
+This is the [Geological Survey of Queensland (GSQ)](https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq)'s' own profile of multiple specifications for boreholes and sampling features. The specific specifications that this model profiles are:
 
 * [GeoSPARQL](https://www.opengeospatial.org/standards/geosparql) - an OGC standard for representing real-world features and their geometries. Used for many spatial objects
 * [GeoSciML](https://www.opengeospatial.org/standards/geosciml) - an [Open Geospatial Consortium](https://www.opengeospatial.org/) (OGC) standard for geoscience data representation that includes a borehole model
@@ -17,23 +15,21 @@ The specific specifications that this model profiles are:
 
 This profile is designed to meet the needs of the [Geological Survey of Queensland]() (GSQ) and to both interoperate with other information models and profiles in use by them (such as the [GSQ Samples Profile](https://github.com/CSIRO-enviro-informatics/gsq-sample-profile) and the [GSQ Dataset Profile](https://github.com/CSIRO-enviro-informatics/gsq-dataset-profile)) and also with national (Australia) and international geoscience information models and systems.
 
-### Other views of a `Borehole`
+## Profile perspectives 
 
-<img src="model/borehole-hierarchy.svg" style="width:300px;" alt="Borehole hierarchy`" />  
+Here are a serices of perspectives (views) of this profile.
 
-**Fig. 2**: Borehole hierarchy  
+<img src="model/Classes.svg" style="width:50%;" alt="Borehole Classes" />  
+**Fig. 2**: This profile's Borehole Classes. *Well* & *Wellore* are specialised types of *Borehole* with a *Well* containing multiple *Wellbores*. A *Borehole* is composed of one or more *BoreholeIntervals*. *BoreholeIntervals* may be in sequence with other *BoreholeIntervals* (Interval X, next, Intervay Y).
 
-<img src="model/geosparql.svg" style="width:300px;" alt="Borehole as a GeoSPARQL `Feature`" />  
+<img src="model/align-GeoSPARQL.svg" style="width:55%;" alt="Borehole as a GeoSPARQL `Feature`" /><br />  
+**Fig. 3**: Alignment with GeoSPARQL: `Borehole` as a GeoSPARQL `Feature`  
 
-**Fig. 3**: Borehole as a GeoSPARQL `Feature`  
+<img src="model/align-SWEET.svg" style="width:65%;;" alt="Borehole in relation to SWEET ontology objects" /><br />
+**Fig. 4**: Alignment with [SWEET](http://www.sweetontology.org/): `Borehole` in relation to SWEET ontology individuals  
 
-<img src="model/sweet.svg" style="width:300px;" alt="Borehole in relation to SWEET ontology objects" />  
-
-**Fig. 4**: Borehole in relation to SWEET ontology objects  
-
-<img src="model/sosa.svg" style="width:300px;" alt="Borehole in relation SOSA objects (for sample relations)  " />  
-
-**Fig. 5**: Borehole in relation SOSA objects (for sample relations)  
+<img src="model/align-SOSA.svg" style="width75%;" alt="Borehole in relation SOSA objects (for sample relations)  " /><br />
+**Fig. 5**: Alignment with SOSA: `Borehole` in relation SOSA objects (for sample relations). Also included is GSQ's eneral `Site` class  
 
 
 ## Profile Resources
@@ -44,7 +40,6 @@ This profile is presented as a series of files that perform different roles:
 * [profile.ttl](profile.ttl) - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's [Profiles Ontology](https://www.w3.org/TR/dx-prof/) which describes how all the parts related to one another, the roles they play (to give *guidance* for use, to *validate* data etc.) and how this profile *profiles* the various standards listed above.
 * [full-constraints.ttl](full-constraints.ttl) - a [SHACL](https://www.w3.org/TR/shacl/) constraints language *Shapes graph* used to validate instances of `Borehole`s expressed in RDF
 * [ckan-schema.json](ckan-schema.json) - a form schema for the [CKAN dataset catalogue tool](https://ckan.org) to create a data entry form for `Borehole`s
-
 
 
 ## License
@@ -58,6 +53,8 @@ The content of this repository is licensed for use with the [Creative Commons 4.
 
 *author*:  
 **Nicholas Car**  
-*Senior Experimental Scientist*  
-CSIRO Land & Water, Environmental Informatics Group  
-<nicholas.car@csiro.au>
+*Data Systems Architect*  
+SURROUND Austrlia Pty Ltd  
+*(formerly of CSIRO)*   
+<nicholas.car@surroundaustralia.com>  
+https://surroundaustralia.com
