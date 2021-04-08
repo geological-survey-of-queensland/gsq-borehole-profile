@@ -3,7 +3,7 @@ A model of a geoscience *borehole* which may also be known as a *drillbore*, *we
 
 This model is online at it's namespace location:
 
-* **http://linked.data.gov.au/def/borehole**
+* **https://linked.data.gov.au/def/borehole**
 
 <img src="model/Borehole.svg" style="width:80%;" alt="Borehole Classes" />  
 
@@ -41,7 +41,7 @@ This profile is presented as a series of files that perform different roles:
 
 * [Guidance document](Guidance.pdf) - a written document explaining how to use this profile
 * [model](model/) - the *model* folder contains the model specification itself. This is given as both images and also as a formal [RDF](https://www.w3.org/RDF/) model file (ontology).
-* [profile.html](profile.html) - normative model documentation, online as a web page for human reading, at **http://linked.data.gov.au/def/borehole**
+* [profile.html](profile.html) - normative model documentation, online as a web page for human reading, at **https://linked.data.gov.au/def/borehole**
 * [profile.ttl](profile.ttl) - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's [Profiles Vocabulary](https://www.w3.org/TR/dx-prof/) which describes how all the parts related to one another, the roles they play (to give *guidance* for use, to *validate* data etc.) and how this profile *profiles* the various standards listed above.
 * [full-constraints.ttl](full-constraints.ttl) - a [SHACL](https://www.w3.org/TR/shacl/) constraints language *Shapes graph* used to validate instances of `Borehole`s expressed in RDF
 * [ckan-schema.json](ckan-schema.json) - a form schema for the [CKAN dataset catalogue tool](https://ckan.org) to create a data entry form for `Borehole`s
