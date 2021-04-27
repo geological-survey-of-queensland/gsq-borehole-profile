@@ -1,11 +1,11 @@
 # GSQ Dataset Profile's profile declaration according to the Profiles Ontology
-@prefix gsq: <http://linked.data.gov.au/def/borehole/> .
+@prefix gsq: <https://linked.data.gov.au/def/borehole/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 
 
-<http://linked.data.gov.au/def/borehole>
+<https://linked.data.gov.au/def/borehole>
   a prof:Profile ;
   rdfs:label "GSQ's Borehole Profile" ;
   rdfs:comment """The Geological Survey of Queensland's profile of several specifications to characterise a borehole""" ;
@@ -20,7 +20,7 @@
     prof:hasRole role:Specification ;
     dct:conformsTo <https://www.w3.org/TR/owl2-syntax/> ;  # TODO: find the best reference for OWL2
     dct:format <https://w3id.org/mediatype/text/turtle> ;
-    prof:hasArtifact <http://linked.data.gov.au/def/borehole/model/borehole.ttl> ;
+    prof:hasArtifact <https://linked.data.gov.au/def/borehole/model/borehole.ttl> ;
   ] ,
   [
     a prof:ResourceDescriptor ;

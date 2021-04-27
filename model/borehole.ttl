@@ -1,4 +1,4 @@
-@prefix : <http://linked.data.gov.au/def/borehole/> .
+@prefix : <https://linked.data.gov.au/def/borehole/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,15 +6,15 @@
 @prefix sdo: <https://schema.org/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix geox: <http://linked.data.gov.au/def/geox/> .
-@prefix loci: <http://linked.data.gov.au/def/loci/> .
+@prefix geox: <https://linked.data.gov.au/def/geox/> .
+@prefix loci: <https://linked.data.gov.au/def/loci/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@base <http://linked.data.gov.au/def/borehole> .
+@base <https://linked.data.gov.au/def/borehole> .
 
-<http://linked.data.gov.au/def/borehole> rdf:type owl:Ontology ;
+<https://linked.data.gov.au/def/borehole> rdf:type owl:Ontology ;
                                           owl:imports <http://www.w3.org/2006/time#2016> ,
                                                       <http://www.w3.org/ns/sosa/> ,
                                                       <http://www.w3.org/ns/ssn/ext> ;
@@ -46,7 +46,7 @@ sdo:domainIncludes rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://linked.data.gov.au/def/borehole/driller
+###  https://linked.data.gov.au/def/borehole/driller
 :driller rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf prov:wasAttributedTo ;
          rdfs:comment "An organisation that drilled the borehole."@en ;
@@ -55,7 +55,7 @@ sdo:domainIncludes rdf:type owl:AnnotationProperty .
          sdo:domainIncludes :Borehole .
 
 
-###  http://linked.data.gov.au/def/borehole/hadDrillingMethod
+###  https://linked.data.gov.au/def/borehole/hadDrillingMethod
 :hadDrillingMethod rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf loci:hadGenerationMethod ;
                    rdfs:domain :Borehole ;
@@ -67,7 +67,7 @@ sdo:domainIncludes rdf:type owl:AnnotationProperty .
 This method is a sub property of the Loc-I Ontology's had:GenerationMethod which is a property chain axiom for PROV's  prov:wasGeneratedBy / prov:qualifiedAssociation / prov:hadPlan which allows an Entity (the borehole) to indicate the method (a PROV Plan) that was used to instruct the Activity that generated it (here the event of drilling).""" .
 
 
-###  http://linked.data.gov.au/def/borehole/hadDrillingTime
+###  https://linked.data.gov.au/def/borehole/hadDrillingTime
 :hadDrillingTime rdf:type owl:ObjectProperty ;
                  rdfs:range time:ProperInterval ;
                  rdfs:comment "The time period during which the borehole was drilled."@en ;
@@ -76,7 +76,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
                  sdo:domainIncludes :Borehole .
 
 
-###  http://linked.data.gov.au/def/borehole/hasElevation
+###  https://linked.data.gov.au/def/borehole/hasElevation
 :hasElevation rdf:type owl:ObjectProperty ;
               rdfs:range geox:VerticalGeometry ;
               rdfs:comment "The position of a borehole vertically, with reference to the earthe's surface."@en ;
@@ -84,7 +84,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
               sdo:domainIncludes :Borehole .
 
 
-###  http://linked.data.gov.au/def/borehole/hasInclination
+###  https://linked.data.gov.au/def/borehole/hasInclination
 :hasInclination rdf:type owl:ObjectProperty ;
                 rdfs:domain :Borehole ;
                 rdfs:range skos:Concept ;
@@ -93,7 +93,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
                 skos:usageNote "Inclinations must be selected from the Borehole Inclination vocabulary. If the borehole shaft has multiple angles, multiple :hasInclination properties should be used."@en .
 
 
-###  http://linked.data.gov.au/def/borehole/hasPurpose
+###  https://linked.data.gov.au/def/borehole/hasPurpose
 :hasPurpose rdf:type owl:ObjectProperty ;
             rdfs:domain :Borehole ;
             rdfs:range skos:Concept ;
@@ -102,7 +102,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
             skos:usageNote "Purposes must be selected from the Borehole Purpose vocabulary. Multiple purposes may be selected. If purposes are time-bound, this should be indicated by assigning the purpose a time:hasTime property."@en .
 
 
-###  http://linked.data.gov.au/def/borehole/hasStateorTerritory
+###  https://linked.data.gov.au/def/borehole/hasStateorTerritory
 :hasStateorTerritory rdf:type owl:ObjectProperty ;
                      rdfs:range skos:Concept ;
                      rdfs:comment "The Borehole is juristictionally within an Australian State or Territory."@en ;
@@ -111,7 +111,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
                      sdo:domainIncludes :Borehole .
 
 
-###  http://linked.data.gov.au/def/borehole/hasStatus
+###  https://linked.data.gov.au/def/borehole/hasStatus
 :hasStatus rdf:type owl:ObjectProperty ;
            rdfs:domain :Borehole ;
            rdfs:range skos:Concept ;
@@ -120,7 +120,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
            skos:usageNote "Status must be selected from the Borehole Status vocabulary."@en .
 
 
-###  http://linked.data.gov.au/def/borehole/hasSurfaceCircumstance
+###  https://linked.data.gov.au/def/borehole/hasSurfaceCircumstance
 :hasSurfaceCircumstance rdf:type owl:ObjectProperty ;
                         rdfs:domain :Borehole ;
                         rdfs:range skos:Concept ;
@@ -130,7 +130,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
                         skos:usageNote "Surface Circumstances must be selected from the Borehole Surface Circumstance vocabulary." .
 
 
-###  http://linked.data.gov.au/def/borehole/operator
+###  https://linked.data.gov.au/def/borehole/operator
 :operator rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf prov:wasAttributedTo ;
           rdfs:comment "An organisation that maintains/uses/runs the borehole."@en ;
@@ -139,7 +139,7 @@ This method is a sub property of the Loc-I Ontology's had:GenerationMethod which
           sdo:domainIncludes :Borehole .
 
 
-###  http://linked.data.gov.au/def/loci/hadGenerationMethod
+###  https://linked.data.gov.au/def/loci/hadGenerationMethod
 loci:hadGenerationMethod rdf:type owl:ObjectProperty .
 
 
@@ -151,7 +151,7 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  http://linked.data.gov.au/def/borehole/Borehole
+###  https://linked.data.gov.au/def/borehole/Borehole
 :Borehole rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasStatus ;
@@ -162,7 +162,7 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty .
           rdfs:label "Borehole" .
 
 
-###  http://linked.data.gov.au/def/geox/VerticalGeometry
+###  https://linked.data.gov.au/def/geox/VerticalGeometry
 geox:VerticalGeometry rdf:type owl:Class .
 
 
