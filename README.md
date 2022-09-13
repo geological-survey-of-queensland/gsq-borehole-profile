@@ -52,11 +52,21 @@ The content of this repository is licensed for use with the [Creative Commons 4.
 
 
 ## Contacts
-*owner*:  
-**Geological Survey of Queensland**  
-1 William St, Brisbane, Queensland, Australia  
+*System owner*:  
+**Mark Gordon**,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,
+<mark.gordon@resources.qld.gov.au>  
 
-*author*:  
+*Contributors*:  
+**Vance Kelly**,
+Principal Data Manager,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,  
+<vance.kelly@resources.qld.gov.au>
+
 **Nicholas Car**  
 *Data Systems Architect*  
 SURROUND Austrlia Pty Ltd  
